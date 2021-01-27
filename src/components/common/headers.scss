@@ -1,0 +1,121 @@
+@import "./variables";
+@import "./core";
+header {
+  padding: 0px;
+  margin-top: 0px;
+  background-image: url("./header_final.png");
+  height: 290px;
+  background-size: 100%;
+  position: relative;
+  background-position-y: top;
+  background-repeat: no-repeat;
+
+  i {
+    color: $fab_color;
+    font-size: x-large;
+    padding: 0.5em;
+  }
+  .flex-container {
+    @include flexContainer(row, space-between);
+    padding-left: 5em;
+    padding-right: 3em;
+    padding-top: 1.5em;
+  }
+  .title {
+    font-weight: 900;
+    color: coral;
+  }
+  ul {
+    position: absolute;
+    padding-left: 5em;
+  }
+  ul > li {
+    color: white;
+    display: inline-block;
+    width: 100px;
+    height: 50px;
+    font-weight: 700;
+  }
+  a {
+    text-decoration: none;
+    color: white;
+  }
+  a:hover {
+    text-decoration: none;
+    color: white;
+    transition: 0.2s;
+  }
+  a::after {
+    color: white;
+    text-decoration: none;
+    text-justify: center;
+  }
+
+  .active {
+    background-color: orange;
+    color: white;
+    border-radius: 15px;
+    padding: 10%;
+    font-weight: 900;
+  }
+  .social {
+    a {
+      i:hover {
+        cursor: pointer;
+      }
+    }
+  }
+}
+@media only screen and (max-width: 1300px) {
+  header {
+    padding: 0px;
+    margin-top: 0px;
+    background-image: url("./header_final.png");
+    background-size: 100% 100%;
+  }
+}
+@media only screen and (max-width: 600px) {
+  header {
+    padding: 0px;
+    margin-top: 0px;
+    background-image: url("./header_final.png");
+    background-size: 100% 80%;
+    position: relative;
+    height: 150px;
+    background-position-y: top;
+    background-repeat: no-repeat;
+    .title {
+      font-weight: 700;
+      color: coral;
+      font-size: medium;
+    }
+     .flex-container {
+    @include flexContainer(row, space-between);
+    padding-left: 1em;
+    padding-right: 1em;
+    padding-top: 0.25em;
+  }
+    ul {
+      position: absolute;
+      margin-top: -35px;
+      display: none;
+    }
+    ul > li {
+      color: white;
+      display: inline-block;
+      padding: 5px;
+      font-weight: 700;
+      font-size: small;
+    }
+    a {
+      text-decoration: none;
+    }
+    a:visited {
+      color: white;
+      text-decoration: none;
+      text-justify: center;
+    }
+  }
+}
+
+
